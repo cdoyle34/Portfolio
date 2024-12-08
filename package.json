@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "compile:scss": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-    "compress:css": "npx sass css/style.css css/style.css --style=compressed",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.css -o public/css/style.css",
+
+    "compress:css": "npx sass public/css/style.css public/css/style.css --style=compressed",
+
     "build": "npm-run-all prefix:css compress:css",
     "start": "node server.js"
   },
